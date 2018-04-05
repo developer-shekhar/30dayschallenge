@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chapter01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XxE-w8-gCv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="120" id="bSx-zv-iWh" customClass="ContactTableViewCell" customModule="Chapter01" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bSx-zv-iWh" id="Beo-0r-wwM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sK-Ic-Pec">
+                                                    <rect key="frame" x="7" y="48.666666666666664" width="111" height="20.999999999999993"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r0x-2i-NtH">
+                                                    <rect key="frame" x="328" y="43" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="csO-bk-i3p"/>
+                                                        <constraint firstAttribute="height" constant="32" id="m51-4Z-w6c"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6sK-Ic-Pec" firstAttribute="leading" secondItem="Beo-0r-wwM" secondAttribute="leadingMargin" constant="-8" id="2Nm-Kj-fgb"/>
+                                                <constraint firstItem="r0x-2i-NtH" firstAttribute="centerY" secondItem="Beo-0r-wwM" secondAttribute="centerY" id="Cbl-ZT-CnL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="r0x-2i-NtH" secondAttribute="trailing" id="YBh-3g-vjB"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6sK-Ic-Pec" secondAttribute="trailingMargin" id="cOb-QP-uce"/>
+                                                <constraint firstItem="6sK-Ic-Pec" firstAttribute="centerY" secondItem="r0x-2i-NtH" secondAttribute="centerY" id="jrJ-oM-xaJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contactImage" destination="r0x-2i-NtH" id="gnf-m6-tbP"/>
+                                            <outlet property="nameLabel" destination="6sK-Ic-Pec" id="LUf-63-ZQE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XxE-w8-gCv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7S3-Sr-yeb"/>
+                            <constraint firstItem="XxE-w8-gCv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SyW-nx-aBP"/>
+                            <constraint firstAttribute="trailing" secondItem="XxE-w8-gCv" secondAttribute="trailing" id="bMZ-Xa-Gye"/>
+                            <constraint firstItem="XxE-w8-gCv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tqC-fh-TWF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="contactTableView" destination="XxE-w8-gCv" id="a6I-Nw-tWE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="116.74876847290641"/>
+        </scene>
+    </scenes>
+</document>
